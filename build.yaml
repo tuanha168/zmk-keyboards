@@ -14,7 +14,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: lily58_dongle prospector_adapter
+    shield: lily58_dongle_pro_xiao prospector_adapter
     cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y
   - board: seeeduino_xiao_ble
     shield: settings_reset
