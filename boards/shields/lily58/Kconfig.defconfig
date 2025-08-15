@@ -50,7 +50,3 @@ endchoice
 endif # LVGL
 
 endif
-
-config ZMK_SPLIT_BLE_PERIPHERAL_COUNT
-    int "Number of BLE peripherals"
-    default 2

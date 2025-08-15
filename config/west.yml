@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: carrefinho                            # <--- add this
-      url-base: https://github.com/carrefinho     # <--- and this
+    - name: tuanha168                            # <--- add this
+      url-base: https://github.com/tuanha168     # <--- and this
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: prospector-zmk-module                 # <--- and these
-      remote: carrefinho                          # <---
+      remote: tuanha168                           # <---
       revision: main                              # <---
   self:
     path: config
