@@ -14,10 +14,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: lily58_dongle_xiao prospector_adapter
-    artifact-name: xiao_lily58_dongle_xiao
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_LV_COLOR_DEPTH_1=16
+    shield: lily58_dongle prospector_adapter
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: nice_nano_v2
