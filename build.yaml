@@ -15,10 +15,8 @@
 include:
   - board: seeeduino_xiao_ble
     shield: lily58_dongle_xiao prospector_adapter
-    cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y -DCONFIG_LV_COLOR_DEPTH=16 -DCONFIG_LV_COLOR_16_SWAP=1
   - board: seeeduino_xiao_ble
     shield: settings_reset
-    cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y
   - board: nice_nano_v2
     shield: lily58_left nice_view_adapter
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
