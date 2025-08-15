@@ -50,3 +50,6 @@ endchoice
 endif # LVGL
 
 endif
+
+config ZMK_SPLIT_BLE_PERIPHERAL_COUNT
+    default 2
