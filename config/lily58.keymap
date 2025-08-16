@@ -16,7 +16,7 @@
 #define NUMPAD  3
 #define MEDIA   4
 
-#define RS_BOOT() &btldr_hold &sys_reset &bootloader
+#define RS_BOOT() &btldr_hold &trans &trans
 
 / {
         behaviors {
@@ -26,7 +26,7 @@
                         tapping-term-ms = <1000>;
                         flavor = "tap-preferred";
                         display-name = "Bootloader Hold";
-                        bindings = <&trans>, <&trans>;
+                        bindings = <&sys_reset>, <&bootloader>;
                 };
         };
         combos {
