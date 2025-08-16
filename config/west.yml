@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
     - name: tuanha168                            # <--- add this
       url-base: https://github.com/tuanha168     # <--- and this
   projects:
@@ -13,6 +15,9 @@ manifest:
       import: app/west.yml
     - name: zmk-config
       remote: mctechnology17
+      revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
       revision: main
     - name: prospector-zmk-module                 # <--- and these
       remote: tuanha168                           # <---
