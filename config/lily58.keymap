@@ -36,6 +36,12 @@
                         bindings = <&bootloader>;
                         layers = <SYMBOL>;
                 };
+                dongle_restart {
+                        timeout-ms = <50>;
+                        key-positions = <39 40 41>;
+                        bindings = <&sys_restart>;
+                        layers = <SYMBOL>;
+                };
         };
 
         keymap {
