@@ -14,7 +14,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: lily58_dongle prospector_adapter
+    shield: lily58_dongle
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: nice_nano_v2
