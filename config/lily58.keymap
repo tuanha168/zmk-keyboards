@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/behaviors.h>
 
 #define DEFAULT 0
 #define NAVI    2
@@ -16,14 +17,25 @@
 #define MEDIA   4
 
 / {
+        behaviors {
+                btldr_hold: btldr_hold {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "BootloaderHold";
+
+                        #binding-cells = <0>;
+                        tapping-term-ms = <1000>;      // Require 1 second hold
+                        flavor = "tap-preferred";      // Always prefer tap if shorter
+                        bindings = <&none>, <&bootloader>;
+                };
+        };
         combos {
                 compatible = "zmk,combos";
-                Bootloader {
+                dongle_bootloader {
                         timeout-ms = <50>;
                         key-positions = <27 28 29>;
                         bindings = <&bootloader>;
                         layers = <SYMBOL>;
-               };
+                };
         };
 
         keymap {
@@ -32,7 +44,7 @@
                 default_layer {
                         display-name = "Lily58";
                         bindings = <
-   &none     &kp N1       &kp N2   &kp N3    &kp N4    &kp N5                                      &kp N6   &kp N7     &kp N8    &kp N9    &kp N0    &none
+   &btldr_hold      &kp N1       &kp N2   &kp N3    &kp N4    &kp N5                                      &kp N6   &kp N7     &kp N8    &kp N9    &kp N0    &btldr_hold
    &kp ESC   &kp Q        &kp W    &kp E     &kp R     &kp T                                       &kp Y    &kp U      &kp I     &kp O     &kp P     &mo MEDIA
    &kp TAB   &kp A        &kp S    &kp D     &kp F     &kp G                                       &kp H    &kp J      &kp K     &kp L     &kp SQT   &kp RET
    &kp LCTRL &mt LSHFT Z  &kp X    &kp C     &kp V     &kp B       &kp LC(LA(CAPS))     &kp CAPS   &kp N    &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
