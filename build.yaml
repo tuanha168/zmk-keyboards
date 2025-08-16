@@ -17,7 +17,6 @@ include:
     shield: lily58_dongle_xiao prospector_adapter
     artifact-name: xiao_lily58_dongle_xiao
     snippet: studio-rpc-usb-uart
-    cmake-args: -DPROSPECTOR_USE_AMBIENT_LIGHT_SENSOR=n -DCONFIG_PROSPECTOR_FIXED_BRIGHTNESS=100
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: nice_nano_v2
