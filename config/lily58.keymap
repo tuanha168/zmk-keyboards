@@ -23,7 +23,7 @@
                 btldr_hold: btldr_hold {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping-term-ms = <1000>;
+                        tapping-term-ms = <5000>;
                         flavor = "tap-preferred";
                         display-name = "Bootloader Hold";
                         bindings = <&bootloader>, <&kp>;
