@@ -15,7 +15,7 @@
 include:
   - board: seeeduino_xiao_ble
     shield: lily58_dongle prospector_adapter
-    cmake-args: -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    cmake-args: -DCONFIG_ZMK_SPLIT_BLE=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_PREF_WEAK_BOND=y
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: nice_nano_v2
