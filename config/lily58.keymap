@@ -16,8 +16,6 @@
 #define NUMPAD  3
 #define MEDIA   4
 
-#define BOOT() &btldr_hold &none &none
-
 / {
         behaviors {
                 btldr_hold: btldr_hold {
