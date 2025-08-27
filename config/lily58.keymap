@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/behaviors.h>
 
 #define DEFAULT 0
-#define NAVI    2
 #define SYMBOL  1
+#define NAV    2
 #define NUMPAD  3
 #define MEDIA   4
 
@@ -56,13 +56,13 @@
                         timeout-ms = <50>;
                         key-positions = <30 31 32>;
                         bindings = <&bootloader>;
-                        layers = <SYMBOL>;
+                        layers = <NAV>;
                 };
                 dongle_reset_right {
                         timeout-ms = <50>;
                         key-positions = <42 43 44>;
                         bindings = <&sys_reset>;
-                        layers = <SYMBOL>;
+                        layers = <NAV>;
                 };
         };
 
@@ -76,7 +76,7 @@
    &kp ESC             &kp Q        &kp W    &kp E     &kp R     &kp T                                       &kp Y    &kp U      &kp I     &kp O     &kp P     &mo MEDIA
    &kp TAB             &kp A        &kp S    &kp D     &kp F     &kp G                                       &kp H    &kp J      &kp K     &kp L     &kp SQT   &kp RET
    &kp LCTRL           &mt LSHFT Z  &kp X    &kp C     &kp V     &kp B       &kp LC(LA(CAPS))     &kp CAPS   &kp N    &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                          &kp LALT &kp LGUI  &kp SPACE &mo SYMBOL                                  &mo NAVI &mo NUMPAD &kp BSPC  &kp DEL
+                          &kp LALT &kp LGUI  &kp SPACE &mo SYMBOL                                  &mo NAV &mo NUMPAD &kp BSPC  &kp DEL
                         >;
                 };
 
