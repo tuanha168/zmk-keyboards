@@ -17,6 +17,7 @@
 #define MEDIA   4
 
 #define HOLD_BOOT(key) &btldr_hold &trans key
+#define HOLD_RESET(key) &reset_hold &trans key
 
 / {
         behaviors {
@@ -27,6 +28,14 @@
                         flavor = "tap-preferred";
                         display-name = "Bootloader Hold";
                         bindings = <&bootloader>, <&kp>;
+                };
+                reset_hold: reset_hold {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <5000>;
+                        flavor = "tap-preferred";
+                        display-name = "Reset Hold";
+                        bindings = <&sys_reset>, <&kp>;
                 };
         };
         combos {
@@ -63,10 +72,10 @@
                 default_layer {
                         display-name = "Lily58";
                         bindings = <
-   &none     &kp N1       &kp N2   &kp N3    &kp N4    &kp N5                                      &kp N6   &kp N7     &kp N8    &kp N9    &kp N0    &none
-   &kp ESC   &kp Q        &kp W    &kp E     &kp R     &kp T                                       &kp Y    &kp U      &kp I     &kp O     &kp P     &mo MEDIA
-   &kp TAB   &kp A        &kp S    &kp D     &kp F     &kp G                                       &kp H    &kp J      &kp K     &kp L     &kp SQT   &kp RET
-   &kp LCTRL &mt LSHFT Z  &kp X    &kp C     &kp V     &kp B       &kp LC(LA(CAPS))     &kp CAPS   &kp N    &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+   HOLD_RESET(&trans)  &kp N1       &kp N2   &kp N3    &kp N4    &kp N5                                      &kp N6   &kp N7     &kp N8    &kp N9    &kp N0    HOLD_RESET(&trans)
+   &kp ESC             &kp Q        &kp W    &kp E     &kp R     &kp T                                       &kp Y    &kp U      &kp I     &kp O     &kp P     &mo MEDIA
+   &kp TAB             &kp A        &kp S    &kp D     &kp F     &kp G                                       &kp H    &kp J      &kp K     &kp L     &kp SQT   &kp RET
+   &kp LCTRL           &mt LSHFT Z  &kp X    &kp C     &kp V     &kp B       &kp LC(LA(CAPS))     &kp CAPS   &kp N    &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
                           &kp LALT &kp LGUI  &kp SPACE &mo SYMBOL                                  &mo NAVI &mo NUMPAD &kp BSPC  &kp DEL
                         >;
                 };
