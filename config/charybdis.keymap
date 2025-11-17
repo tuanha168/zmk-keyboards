@@ -161,7 +161,7 @@
    HOLD_RESET(ESC)  &trans       &trans       &trans       &trans       &trans           &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        HOLD_RESET_MOVE(MOUSE)  &trans
    &bt BT_CLR       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans   &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE  &trans                  &trans
    &out OUT_TOG     &trans       &trans       &trans       &trans       &trans           &trans   &trans        &trans        &trans            &trans                  &trans
-                                              &kp F22      &kp F23      &kp F24          &kp LC(LA(CAPS))       &kp CAPS 
+                                              &kp F22      &kp F23      &kp F24          &kp LC(LA(CAPS))       &kp CAPS
                         >;
                 };
 
