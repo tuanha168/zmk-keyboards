@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: janpfischer
-      url-base: https://github.com/janpfischer
+    # - name: janpfischer
+    #   url-base: https://github.com/janpfischer
     - name: infely
       url-base: https://github.com/infely
   projects:
@@ -11,9 +11,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-dongle-screen
-      remote: janpfischer
-      revision: main
+    # - name: zmk-dongle-screen
+    #   remote: janpfischer
+    #   revision: main
     - name: nice-view-battery
       remote: infely
       revision: main
