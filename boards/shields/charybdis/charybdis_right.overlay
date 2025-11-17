@@ -10,7 +10,7 @@
     status = "okay";
 };
 
-&trackball_input {
+&trackball_split {
 	device = <&trackball>;
 };
 
