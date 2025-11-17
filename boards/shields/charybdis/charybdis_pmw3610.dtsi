@@ -33,7 +33,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &spi0 {
-    status = "okay";
+    status = "disabled";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
