@@ -6,10 +6,6 @@
 	col-offset = <6>;
 };
 
-&spi0 {
-    status = "okay";
-};
-
 &trackball_input {
 	device = <&trackball>;
 };
