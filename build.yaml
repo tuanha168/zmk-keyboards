@@ -22,7 +22,7 @@ include:
 
   # dongle_xiao
   - board: seeeduino_xiao_ble
-    shield: charybdis_dongle dongle_screen
+    shield: charybdis_dongle
     artifact-name: charybdis_dongle_xiao
     snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
