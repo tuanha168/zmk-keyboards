@@ -110,6 +110,10 @@
                         bindings = <&mkp MB5>;
                         key-positions = <31 40>;
                 };
+                combo_scroll {
+                        bindings = <&mo SCROLL>;
+                        key-positions = <31 32 33>;
+                };
         };
 
         keymap {
@@ -138,8 +142,8 @@
                 navigation_layer {
                         display-name = "Nav";
                         bindings = <
-   &kp F1    &kp F2    &kp F3    &kp F4   &kp F5   &kp F6       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT(ESC)
-   &kp F7    &kp F8    &kp F9    &kp F10  &kp F11  &kp F12      &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   &trans
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT(ESC)
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   &trans
    &trans    &trans    &trans    &trans   &trans   &trans       &trans       &trans    &trans    &trans     &trans   &trans
                                  &trans   &trans   &trans       &trans       &trans
                         >;
@@ -168,9 +172,9 @@
                 mouse_layer {
                         display-name = "Mouse";
                         bindings = <
-   &trans    &trans    &trans    &trans    &trans    &trans        &trans       &trans      &trans      &trans    &trans    &to DEFAULT
-   &trans    &trans    &trans    &trans    &trans    &trans        &trans       &mo SCROLL  &mo SLOW    &trans    &trans    &trans
-   &trans    &trans    &trans    &trans    &trans    &trans        &trans       &mkp LCLK   &mkp RCLK   &trans    &trans    &trans
+   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6        &kp F7       &kp F8      &kp F9      &kp F10     &kp F11      &to DEFAULT
+   &trans    &trans    &trans    &trans    &trans    &trans        &trans       &trans      &trans      &trans      &trans       &kp F12
+   &trans    &trans    &trans    &trans    &trans    &trans        &trans       &mkp LCLK   &mo SCROLL  &mkp RCLK   &mo SLOW     &trans
                                  &trans    &trans    &trans        &mkp MB4     &mkp MB5
                         >;
                 };
