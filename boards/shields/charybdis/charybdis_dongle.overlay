@@ -1,24 +1,7 @@
 // Documentation: https://zmk.dev/docs/development/hardware-integration/dongle
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "charybdis-layouts.dtsi"
-#include "charybdis_pmw3610.dtsi"
 #include "charybdis_pointer.dtsi"
-
-&i2c0 {
-    status = "disabled";
-};
-
-&xiao_i2c {
-    status = "disabled";
-};
-
-&spi1 {
-    status = "disabled";
-};
-
-&uart0 {
-    status = "disabled";
-};
 
 &charybdis_physical_layout {
     transform = <&default_transform>;
