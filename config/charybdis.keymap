@@ -54,7 +54,7 @@
                 lt_backspace: layer_tap_backspace {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "tap-preferred";
+                        flavor = "hold-preferred";
                         tapping-term-ms = <200>;
                         quick-tap-ms = <150>;
                         bindings = <&mo>, <&kp>;
