@@ -23,7 +23,7 @@
 
 #define HOLD_BOOT(key) &btldr_hold &trans key
 #define HOLD_RESET(key) &reset_hold &trans key
-#define HOLD_RESET_MOVE(layer) &btldr_hold_move &trans layer
+#define HOLD_BOOT_MOVE(layer) &btldr_hold_move &trans layer
 
 / {
         behaviors {
@@ -132,9 +132,9 @@
                 symbol_layer {
                         display-name = "Symbols";
                         bindings = <
-   HOLD_BOOT(ESC) &kp GRAVE        &kp EXCL  &kp AT    &kp PLUS  &kp AMPS        &kp SEMI  &kp LBKT  &kp RBKT  &none    &none    &trans
-   &trans         &kp ASTRK        &kp CARET &kp PRCNT &kp DLLR  &kp PIPE        &kp COLON &kp LPAR  &kp RPAR  &kp LT   &kp GT   &trans
-   &trans         &mt LSHFT BSLH   &kp SLASH &kp EQUAL &kp MINUS &kp HASH        &kp UNDER &kp LBRC  &kp RBRC  &none    &none    &trans
+   HOLD_BOOT(ESC)  &kp GRAVE        &kp EXCL  &kp AT    &kp PLUS  &kp AMPS        &kp SEMI  &kp LBKT  &kp RBKT  &none    &none    &trans
+   HOLD_RESET(TAB) &kp ASTRK        &kp CARET &kp PRCNT &kp DLLR  &kp PIPE        &kp COLON &kp LPAR  &kp RPAR  &kp LT   &kp GT   &trans
+   &trans          &mt LSHFT BSLH   &kp SLASH &kp EQUAL &kp MINUS &kp HASH        &kp UNDER &kp LBRC  &kp RBRC  &none    &none    &trans
                                              &trans    &trans    &trans          &trans   &trans
                         >;
                 };
@@ -142,8 +142,8 @@
                 navigation_layer {
                         display-name = "Nav";
                         bindings = <
-   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT(ESC)
-   &trans    &trans    &trans    &trans   &trans   &trans       &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   &trans
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT_MOVE(MEDIA)
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   HOLD_RESET(RET)
    &trans    &trans    &trans    &trans   &trans   &trans       &trans       &trans    &trans    &trans     &trans   &trans
                                  &trans   &trans   &trans       &trans       &trans
                         >;
@@ -162,10 +162,10 @@
                 media_layer {
                         display-name = "Media";
                         bindings = <
-   HOLD_RESET(ESC)  &trans       &trans       &trans       &trans       &trans           &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        HOLD_RESET_MOVE(MOUSE)  &trans
-   &bt BT_CLR       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans   &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE  &trans                  &trans
-   &out OUT_TOG     &trans       &trans       &trans       &trans       &trans           &trans   &trans        &trans        &trans            &trans                  &trans
-                                              &kp F22      &kp F23      &kp F24          &kp LC(LA(CAPS))       &kp CAPS
+   &bt BT_CLR       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        &to MOUSE  &trans
+   &out OUT_TOG     &trans       &trans       &trans       &trans       &trans           &trans   &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE  &trans     &trans
+   &trans           &trans       &trans       &trans       &trans       &trans           &trans   &trans        &trans        &trans            &trans     &trans
+                                              &kp F22      &kp F23      &kp F24          &kp CAPS       &kp LC(LA(CAPS))
                         >;
                 };
 
