@@ -87,31 +87,61 @@
                         bindings = <&sys_reset>;
                         layers = <NAV>;
                 };        
-                combo_left_click {
+
+                /*
+                * right half
+                */
+                combo_left_click_r {
                         bindings = <&mkp LCLK>;
                         key-positions = <31 32>;
                 };
-                
-                combo_middle_click {
+                combo_middle_click_r {
                         bindings = <&mkp MCLK>;
                         key-positions = <31 32 33>;
                 };
-
-                combo_right_click {
+                combo_right_click_r {
                         bindings = <&mkp RCLK>;
                         key-positions = <32 33>;
                 };
-                combo_scroll {
+                combo_scroll_r {
                         bindings = <&mo SCROLL>;
                         key-positions = <31 33>;
                 };
-                combo_mb4 {
+                combo_mb4_r {
                         bindings = <&mkp MB4>;
                         key-positions = <31 39>;
                 };
-                combo_mb5 {
+                combo_mb5_r {
                         bindings = <&mkp MB5>;
                         key-positions = <31 40>;
+                };
+
+                /*
+                * left half
+                */
+                combo_left_click_l {
+                        bindings = <&mkp LCLK>;
+                        key-positions = <27 28>;
+                };
+                combo_middle_click_l {
+                        bindings = <&mkp MCLK>;
+                        key-positions = <26 27 28>;
+                };
+                combo_right_click_l {
+                        bindings = <&mkp RCLK>;
+                        key-positions = <26 27>;
+                };
+                combo_scroll_l {
+                        bindings = <&mo SCROLL>;
+                        key-positions = <26 28>;
+                };
+                combo_mb4_l {
+                        bindings = <&mkp MB4>;
+                        key-positions = <28 36>;
+                };
+                combo_mb5_l {
+                        bindings = <&mkp MB5>;
+                        key-positions = <28 37>;
                 };
         };
 
