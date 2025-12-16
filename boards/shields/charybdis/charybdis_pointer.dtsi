@@ -2,12 +2,12 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 8 5>;
+    input-processors = <&zip_xy_scaler 6 5>;
 
     scroller: scroller {
         layers           = <6>;
         input-processors = <
-            &zip_xy_scaler 1 20                              // Scales the scroll speed
+            &zip_xy_scaler 1 25                              // Scales the scroll speed
             &zip_xy_to_scroll_mapper                         // Converts XY movement to scroll events
             &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) // Inverts the scroll direction
         >;
