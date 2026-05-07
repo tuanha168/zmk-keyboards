@@ -23,7 +23,7 @@
 
 #define HOLD_BOOT(key) &btldr_hold &trans key
 #define HOLD_RESET(key) &reset_hold &trans key
-#define HOLD_BOOT_MOVE(layer) &btldr_hold_none 0 0
+#define HOLD_BOOT_NONE &btldr_hold_none 0 0
 
 / {
         behaviors {
@@ -183,7 +183,7 @@
                 navigation_layer {
                         display-name = "Nav";
                         bindings = <
-   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT_MOVE(MEDIA)
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT_NONE
    &trans    &trans    &trans    &trans   &trans   &trans       &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   HOLD_RESET(RET)
    &trans    &trans    &trans    &trans   &trans   &trans       &trans       &trans    &trans    &trans     &trans   &trans
                                  &trans   &trans   &trans       &trans       &trans
