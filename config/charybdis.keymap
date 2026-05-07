@@ -173,7 +173,7 @@
                 symbol_layer {
                         display-name = "Symbols";
                         bindings = <
-   HOLD_BOOT(ESC)  &kp GRAVE        &kp EXCL  &kp AT    &kp PLUS  &kp AMPS        &kp SEMI  &kp LBKT  &kp RBKT  &none    &none    &trans
+   &bootloader     &kp GRAVE        &kp EXCL  &kp AT    &kp PLUS  &kp AMPS        &kp SEMI  &kp LBKT  &kp RBKT  &none    &none    &trans
    HOLD_RESET(TAB) &kp ASTRK        &kp CARET &kp PRCNT &kp DLLR  &kp PIPE        &kp COLON &kp LPAR  &kp RPAR  &kp LT   &kp GT   &trans
    &trans          &mt LSHFT BSLH   &kp SLASH &kp EQUAL &kp MINUS &kp HASH        &kp UNDER &kp LBRC  &kp RBRC  &none    &none    &trans
                                              &trans    &trans    &trans          &trans   &trans
@@ -183,7 +183,7 @@
                 navigation_layer {
                         display-name = "Nav";
                         bindings = <
-   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   HOLD_BOOT_MOVE(MEDIA)
+   &trans    &trans    &trans    &trans   &trans   &trans       &kp HOME     &kp PG_DN &kp PG_UP &kp END    &trans   &bootloader
    &trans    &trans    &trans    &trans   &trans   &trans       &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   HOLD_RESET(RET)
    &trans    &trans    &trans    &trans   &trans   &trans       &trans       &trans    &trans    &trans     &trans   &trans
                                  &trans   &trans   &trans       &trans       &trans
