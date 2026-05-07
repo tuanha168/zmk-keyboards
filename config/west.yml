@@ -4,18 +4,18 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: janpfischer
       url-base: https://github.com/janpfischer
-    - name: 280Zo
-      url-base: https://github.com/280Zo
+    - name: badjeff
+      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: abb64ba
+      revision: main
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
     - name: zmk-pmw3610-driver
-      remote: 280Zo
-      revision: main
+      remote: badjeff
+      revision: zmk-0.4
   self:
     path: config
