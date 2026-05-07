@@ -1,0 +1,5 @@
+/* XIAO nRF52840 uses NFC pins (P0.02, P0.03) as GPIO.
+   Required since Zephyr 4.1 removed CONFIG_NFCT_PINS_AS_GPIOS Kconfig. */
+&uicr {
+    nfct-pins-as-gpios;
+};
