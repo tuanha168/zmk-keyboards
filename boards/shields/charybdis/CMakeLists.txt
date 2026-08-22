@@ -7,7 +7,7 @@ if(CONFIG_SHIELD_CHARYBDIS_DONGLE AND CONFIG_SHIELD_DONGLE_SCREEN)
       "${ZEPHYR_DONGLE_SCREEN_MODULE_DIR}/boards/shields/dongle_screen/src/custom_status_screen.c")
   set_source_files_properties(
     "${dongle_screen_status_source}"
-    DIRECTORY "${ZEPHYR_DONGLE_SCREEN_MODULE_DIR}/boards/shields/dongle_screen"
+    TARGET_DIRECTORY "..__zmk-dongle-screen"
     PROPERTIES HEADER_FILE_ONLY TRUE
   )
 
