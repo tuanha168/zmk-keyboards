@@ -5,7 +5,7 @@ if(CONFIG_SHIELD_CHARYBDIS_DONGLE AND CONFIG_SHIELD_DONGLE_SCREEN)
 
   set(dongle_screen_status_source
       "${ZEPHYR_DONGLE_SCREEN_MODULE_DIR}/boards/shields/dongle_screen/src/custom_status_screen.c")
-  cmake_language(DEFER CALL set_source_files_properties
+  cmake_language(DEFER DIRECTORY "${CMAKE_SOURCE_DIR}" CALL set_source_files_properties
     "${dongle_screen_status_source}"
     TARGET_DIRECTORY "..__zmk-dongle-screen__boards__shields__dongle_screen"
     PROPERTIES HEADER_FILE_ONLY TRUE
