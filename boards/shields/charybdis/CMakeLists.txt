@@ -13,6 +13,7 @@ if(CONFIG_SHIELD_CHARYBDIS_DONGLE AND CONFIG_SHIELD_DONGLE_SCREEN)
 
   zephyr_library()
   zephyr_library_include_directories(
+    "${CMAKE_SOURCE_DIR}/include"
     "${ZEPHYR_DONGLE_SCREEN_MODULE_DIR}/boards/shields/dongle_screen/include"
     "${ZEPHYR_DONGLE_SCREEN_MODULE_DIR}/boards/shields/dongle_screen/src"
   )
