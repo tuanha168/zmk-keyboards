@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: tuanha168
-      revision: 7150d8182f2e768510cc0782a5dbe5cd0434966c
+      revision: 0ebf1b73cbd01f44fac1ef72447e2c65e1df496d
   self:
     path: config
