@@ -246,9 +246,9 @@
                 game_layer {
                         display-name = "Gamepad";
                         bindings = <
-   &none    &none    &gp_axis GP_LY GP_NEG    &none    &none    &none        &gp_btn GP_L1     &gp_btn GP_WEST   &gp_btn GP_NORTH  &gp_btn GP_R1    &gp_btn GP_SELECT  &to DEFAULT
-   &none    &gp_axis GP_LX GP_NEG              &gp_axis GP_LY GP_POS         &gp_axis GP_LX GP_POS    &none    &none        &gp_btn GP_L2     &gp_btn GP_SOUTH  &gp_btn GP_EAST   &gp_btn GP_R2    &gp_btn GP_L3      &gp_btn GP_R3
-   &none    &none    &none                     &none                         &none                  &none        &gp_btn GP_START  &none             &none             &none            &none              &none
+   &none    &none    &gp_btn GP_L1             &gp_axis GP_LY GP_NEG    &gp_btn GP_L2             &none        &gp_btn GP_R2     &gp_btn GP_WEST   &gp_btn GP_NORTH  &gp_btn GP_R1    &none              &to DEFAULT
+   &none    &none    &gp_axis GP_LX GP_NEG     &gp_axis GP_LY GP_POS    &gp_axis GP_LX GP_POS     &none        &none             &gp_btn GP_SOUTH  &gp_btn GP_EAST   &none            &gp_btn GP_L3      &gp_btn GP_R3
+   &none    &none    &none                     &none                     &none                      &gp_btn GP_SELECT    &gp_btn GP_START  &none             &none             &none            &none              &none
                                                                                &none    &none        &none              &none             &none
                         >;
                 };
