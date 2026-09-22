@@ -1,4 +1,5 @@
 #include <input/processors.dtsi>
+#include <behaviors/input_processor_fwd_to_hid_io.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
 &trackball_listener {
@@ -17,5 +18,10 @@
     slow_pointer: slow_pointer {
         layers           = <7>;
         input-processors = <&zip_xy_scaler 1 1>;
+    };
+
+    gamepad_pointer: gamepad_pointer {
+        layers           = <8>;
+        input-processors = <&zipftgp>;
     };
 };
