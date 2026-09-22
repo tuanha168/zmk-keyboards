@@ -12,5 +12,8 @@ manifest:
     - name: zmk-dongle-screen
       remote: tuanha168
       revision: 0ebf1b73cbd01f44fac1ef72447e2c65e1df496d
+    - name: zmk-hid-io
+      remote: tuanha168
+      revision: 6273ec184c7db49025f567f99f4911c7482dd845
   self:
     path: config

@@ -5,6 +5,8 @@
  */
 
 #include <behaviors.dtsi>
+#include <behaviors/hid_io_gamepad.dtsi>
+#include <dt-bindings/zmk/hid-io/gamepad.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -20,6 +22,7 @@
 #define MEDIA   5
 #define SCROLL  6
 #define SLOW    7
+#define GAME    8
 
 #define HOLD_BOOT(key) &btldr_hold &trans key
 #define HOLD_RESET(key) &reset_hold &trans key
@@ -213,7 +216,7 @@
                 media_layer {
                         display-name = "Media";
                         bindings = <
-   &bt BT_CLR       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        &trans     &to DEFAULT
+   &bt BT_CLR       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        &to GAME   &to DEFAULT
    &out OUT_TOG     &trans       &trans       &trans       &trans       &trans           &trans   &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE  &trans     &trans
    &trans           &trans       &trans       &trans       &trans       &trans           &trans   &trans        &trans        &trans            &trans     &trans
                                               &kp F22      &kp F23      &kp F24          &kp CAPS       &kp LC(LA(CAPS))
@@ -237,6 +240,16 @@
    &trans    &trans    &trans    &trans    &trans    &trans        &trans       &trans    &trans    &trans    &trans    &trans
    &trans    &trans    &trans    &trans    &trans    &trans        &trans       &trans    &trans    &trans    &trans    &trans
                                  &trans    &trans    &trans        &trans       &trans
+                        >;
+                };
+
+                game_layer {
+                        display-name = "Gamepad";
+                        bindings = <
+   &none    &none    &gp_axis GP_LY GP_NEG    &none    &none    &none        &gp_btn GP_L1     &gp_btn GP_WEST   &gp_btn GP_NORTH  &gp_btn GP_R1    &gp_btn GP_SELECT  &to DEFAULT
+   &none    &gp_axis GP_LX GP_NEG              &gp_axis GP_LY GP_POS         &gp_axis GP_LX GP_POS    &none    &none        &gp_btn GP_L2     &gp_btn GP_SOUTH  &gp_btn GP_EAST   &gp_btn GP_R2    &gp_btn GP_L3      &gp_btn GP_R3
+   &none    &none    &none                     &none                         &none                  &none        &gp_btn GP_START  &none             &none             &none            &none              &none
+                                                                               &none    &none        &none              &none             &none
                         >;
                 };
 
