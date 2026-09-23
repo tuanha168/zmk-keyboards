@@ -29,6 +29,27 @@
 #define HOLD_RESET(key) &reset_hold &trans key
 #define HOLD_BOOT_NONE &btldr_hold_none 0 0
 
+#define PAD_A          &gp_btn GP_SOUTH
+#define PAD_B          &gp_btn GP_EAST
+#define PAD_X          &gp_btn GP_WEST
+#define PAD_Y          &gp_btn GP_NORTH
+#define PAD_LB         &gp_btn GP_L1
+#define PAD_RB         &gp_btn GP_R1
+#define PAD_LT         &gp_btn GP_L2
+#define PAD_RT         &gp_btn GP_R2
+#define PAD_SELECT     &gp_btn GP_SELECT
+#define PAD_START      &gp_btn GP_START
+#define PAD_L3         &gp_btn GP_L3
+#define PAD_R3         &gp_btn GP_R3
+#define PAD_LS_LEFT    &gp_axis GP_LX GP_NEG
+#define PAD_LS_RIGHT   &gp_axis GP_LX GP_POS
+#define PAD_LS_UP      &gp_axis GP_LY GP_NEG
+#define PAD_LS_DOWN    &gp_axis GP_LY GP_POS
+#define PAD_DPAD_LEFT  &gp_axis GP_DPAD_X GP_NEG
+#define PAD_DPAD_RIGHT &gp_axis GP_DPAD_X GP_POS
+#define PAD_DPAD_UP    &gp_axis GP_DPAD_Y GP_NEG
+#define PAD_DPAD_DOWN  &gp_axis GP_DPAD_Y GP_POS
+
 / {
         behaviors {
                 btldr_hold: btldr_hold {
@@ -247,28 +268,20 @@
                 game_layer {
                         display-name = "Gamepad";
                         bindings = <
-//  ESC    Q      W                     E                      R                     T           Y                   U                 I                 O               P             MEDIA
-   &none  &none  &gp_btn GP_L1          &gp_axis GP_LY GP_NEG  &gp_btn GP_L2          &none        &none              &gp_btn GP_R2    &gp_btn GP_NORTH  &gp_btn GP_R1  &none          &to DEFAULT
-//  TAB    A      S                     D                      F                     G           H                   J                 K                 L               '             ENTER
-   &none  &none  &gp_axis GP_LX GP_NEG  &gp_axis GP_LY GP_POS  &gp_axis GP_LX GP_POS  &none        &none              &gp_btn GP_WEST  &gp_btn GP_SOUTH  &gp_btn GP_EAST  &gp_btn GP_L3 &gp_btn GP_R3
-//  CTRL   Z      X                     C                      V                     B           N                   M                 ,                 .               /             SHIFT
-   &none  &none  &none                  &none                   &none                   &none        &gp_btn GP_SELECT  &gp_btn GP_START &none             &none           &none          &none
-//                       GUI                 SPACE           SYMBOL                                        NAV               BACKSPACE
-                                       &none  &mo GAME_DPAD  &none                    &none              &none
+   &none  &none  PAD_LB       PAD_LS_UP    PAD_LT        &none       &none        PAD_RT     PAD_Y  PAD_RB  &none    &to DEFAULT
+   &none  &none  PAD_LS_LEFT  PAD_LS_DOWN  PAD_LS_RIGHT  &none       &none        PAD_X      PAD_A  PAD_B   PAD_L3   PAD_R3
+   &none  &none  &none        &none        &none         &none       PAD_SELECT  PAD_START  &none  &none   &none    &none
+                          &none  &mo GAME_DPAD  &none                 &none  &none
                         >;
                 };
 
                 game_dpad_layer {
                         display-name = "Gamepad D-pad";
                         bindings = <
-//  ESC     Q       W                           E                            R                           T             Y       U       I       O       P       MEDIA
-   &trans  &trans  &trans                      &gp_axis GP_DPAD_Y GP_NEG  &trans                      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//  TAB     A       S                           D                            F                           G             H       J       K       L       '       ENTER
-   &trans  &trans  &gp_axis GP_DPAD_X GP_NEG  &gp_axis GP_DPAD_Y GP_POS  &gp_axis GP_DPAD_X GP_POS  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//  CTRL    Z       X                           C                            V                           B             N       M       ,       .       /       SHIFT
-   &trans  &trans  &trans                      &trans                       &trans                      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//                        GUI                  SPACE   SYMBOL                          NAV     BACKSPACE
-                                       &trans  &trans  &trans                         &trans  &trans
+   &trans  &trans  &trans         PAD_DPAD_UP    &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  PAD_DPAD_LEFT  PAD_DPAD_DOWN  PAD_DPAD_RIGHT  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans         &trans         &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans                 &trans  &trans
                         >;
                 };
 
