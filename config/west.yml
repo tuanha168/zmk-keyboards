@@ -6,14 +6,14 @@ manifest:
       url-base: https://github.com/tuanha168
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: ead91ca094c6cd778574f73b9ae011ddab611c66
+      remote: tuanha168
+      revision: 1435d642d05c0b5b30b8a357defa59b651f185ce
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: tuanha168
       revision: 0ebf1b73cbd01f44fac1ef72447e2c65e1df496d
     - name: zmk-hid-io
       remote: tuanha168
-      revision: 65a27443c1a1ae1522575f4f4b78a3c68cd755b2
+      revision: e456031df22bb660e2eec5a9d3b9c263dd9cd470
   self:
     path: config
