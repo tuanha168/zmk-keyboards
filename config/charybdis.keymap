@@ -268,20 +268,20 @@
                 game_layer {
                         display-name = "Gamepad";
                         bindings = <
-   &none  &none  PAD_LB       PAD_LS_UP    PAD_LT        &none       &none        PAD_RT     PAD_Y  PAD_RB  &none    &to DEFAULT
-   &none  &none  PAD_LS_LEFT  PAD_LS_DOWN  PAD_LS_RIGHT  &none       &none        PAD_X      PAD_A  PAD_B   PAD_L3   PAD_R3
-   &none  &none  &none        &none        &none         &none       PAD_SELECT  PAD_START  &none  &none   &none    &none
-                          &none  &mo GAME_DPAD  &none                 &none  &none
+   &none  &none  PAD_LB       PAD_LS_UP    PAD_LT        &none                 &none        PAD_RT     PAD_Y  PAD_RB  &none    &to DEFAULT
+   &none  &none  PAD_LS_LEFT  PAD_LS_DOWN  PAD_LS_RIGHT  &none                 &none        PAD_X      PAD_A  PAD_B   PAD_L3   PAD_R3
+   &none  &none  &none        &none        &none         &none                 PAD_SELECT   PAD_START  &none  &none   &none    &none
+                          &none  &mo GAME_DPAD  &none                          &none  &none
                         >;
                 };
 
                 game_dpad_layer {
                         display-name = "Gamepad D-pad";
                         bindings = <
-   &trans  &trans  &trans         PAD_DPAD_UP    &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  PAD_DPAD_LEFT  PAD_DPAD_DOWN  PAD_DPAD_RIGHT  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans         &trans         &trans          &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans                 &trans  &trans
+   &trans  &trans  &trans         PAD_DPAD_UP    &trans                       &trans       &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  PAD_DPAD_LEFT  PAD_DPAD_DOWN  PAD_DPAD_RIGHT               &trans       &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans         &trans         &trans                       &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans                              &trans  &trans
                         >;
                 };
 
