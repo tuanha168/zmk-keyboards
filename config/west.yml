@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: tuanha168
-      revision: d2cce6aa3b6fb24648921ec0613c82a27670c4c8
+      revision: 247d841d46193e3f8977010869e91612cec4c014
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: tuanha168
