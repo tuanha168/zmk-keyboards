@@ -14,6 +14,6 @@ manifest:
       revision: 0ebf1b73cbd01f44fac1ef72447e2c65e1df496d
     - name: zmk-hid-io
       remote: tuanha168
-      revision: ed9f24f496ca495779f7e72e0c7dbf2633a58355
+      revision: 6429252776ca6700769cf96851cdbb66385caa6d
   self:
     path: config
