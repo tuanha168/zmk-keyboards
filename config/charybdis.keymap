@@ -247,20 +247,28 @@
                 game_layer {
                         display-name = "Gamepad";
                         bindings = <
-   &none    &none    &gp_btn GP_L1             &gp_axis GP_LY GP_NEG    &gp_btn GP_L2             &none        &none             &gp_btn GP_R2     &gp_btn GP_NORTH  &gp_btn GP_R1    &none              &to DEFAULT
-   &none    &none    &gp_axis GP_LX GP_NEG     &gp_axis GP_LY GP_POS    &gp_axis GP_LX GP_POS     &none        &none             &gp_btn GP_WEST   &none             &gp_btn GP_EAST  &gp_btn GP_L3      &gp_btn GP_R3
-   &none    &none    &none                     &none                     &none                      &gp_btn GP_SELECT    &gp_btn GP_START  &none             &gp_btn GP_SOUTH  &none            &none              &none
-                                                                                &none    &mo GAME_DPAD    &none          &none             &none
+//  ESC    Q      W                     E                      R                     T           Y                   U                 I                 O               P             MEDIA
+   &none  &none  &gp_btn GP_L1          &gp_axis GP_LY GP_NEG  &gp_btn GP_L2          &none        &none              &gp_btn GP_R2    &gp_btn GP_NORTH  &gp_btn GP_R1  &none          &to DEFAULT
+//  TAB    A      S                     D                      F                     G           H                   J                 K                 L               '             ENTER
+   &none  &none  &gp_axis GP_LX GP_NEG  &gp_axis GP_LY GP_POS  &gp_axis GP_LX GP_POS  &none        &none              &gp_btn GP_WEST  &gp_btn GP_SOUTH  &gp_btn GP_EAST  &gp_btn GP_L3 &gp_btn GP_R3
+//  CTRL   Z      X                     C                      V                     B           N                   M                 ,                 .               /             SHIFT
+   &none  &none  &none                  &none                   &none                   &none        &gp_btn GP_SELECT  &gp_btn GP_START &none             &none           &none          &none
+//                       GUI                 SPACE           SYMBOL                                        NAV               BACKSPACE
+                                       &none  &mo GAME_DPAD  &none                    &none              &none
                         >;
                 };
 
                 game_dpad_layer {
                         display-name = "Gamepad D-pad";
                         bindings = <
-   &trans    &trans    &trans                         &gp_axis GP_DPAD_Y GP_NEG    &trans                         &trans        &trans    &trans    &trans    &trans    &trans    &trans
-   &trans    &trans    &gp_axis GP_DPAD_X GP_NEG     &gp_axis GP_DPAD_Y GP_POS    &gp_axis GP_DPAD_X GP_POS     &trans        &trans    &trans    &trans    &trans    &trans    &trans
-   &trans    &trans    &trans                         &trans                         &trans                         &trans        &trans    &trans    &trans    &trans    &trans    &trans
-                                                                                         &trans    &trans    &trans    &trans    &trans
+//  ESC     Q       W                           E                            R                           T             Y       U       I       O       P       MEDIA
+   &trans  &trans  &trans                      &gp_axis GP_DPAD_Y GP_NEG  &trans                      &trans        &trans  &trans  &trans  &trans  &trans  &trans
+//  TAB     A       S                           D                            F                           G             H       J       K       L       '       ENTER
+   &trans  &trans  &gp_axis GP_DPAD_X GP_NEG  &gp_axis GP_DPAD_Y GP_POS  &gp_axis GP_DPAD_X GP_POS  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+//  CTRL    Z       X                           C                            V                           B             N       M       ,       .       /       SHIFT
+   &trans  &trans  &trans                      &trans                       &trans                      &trans        &trans  &trans  &trans  &trans  &trans  &trans
+//                        GUI                  SPACE   SYMBOL                          NAV     BACKSPACE
+                                       &trans  &trans  &trans                         &trans  &trans
                         >;
                 };
 
